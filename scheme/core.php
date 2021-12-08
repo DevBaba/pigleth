@@ -22,6 +22,11 @@
         define('CHARSET','utf8');
         define('DBPORT',':3306');
     
+    /**
+     * Bas URL
+     */
+    define('BASE_URL','http://localhost/pigs/');  // change it if you use it online (or uploaded to hosting server)
+
     /*
      * inlude all in one - 
      * so all the pages call this file(core) will also have these files(setting, security, datetime_functions, database/Model)

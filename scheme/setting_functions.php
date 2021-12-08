@@ -31,7 +31,7 @@
      */
     function base_url()
     {
-        return "http://localhost/pigs/"; // change it if you use it online (or uploaded to hosting server)
+        return BASE_URL;
     }
     
 ?>

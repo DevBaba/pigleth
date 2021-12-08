@@ -74,8 +74,7 @@ if (empty($_SESSION['username'])) {
                                     // apply security to your data using our cleanData() function (or use directly the trim() & stripslashes() php built-in functions)
                                     
                                     $pig_id = explode(',',$_POST['pig_id'])[0]; // the value of pig_id is two value separated by comma, thats why I get the first value using explode() function
-                                    //$pig_no = explode(',',$_POST['pig_id'])[1];
-                                    $pig_no = 1; // sold one-by-one
+                                    $pig_no = explode(',',$_POST['pig_id'])[1];
 
                                     $kilogram = cleanData($_POST['kilogram']);
                                     $amount = cleanData($_POST['amount']);

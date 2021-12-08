@@ -373,7 +373,7 @@
                     $balance = $capitals['cap'] - $expenses['expe'] - $pig['total_amount'];
                     array_push($all, $balance);//Capital Balanced
 
-                    $sold_pigs = $this->db->query('SELECT sum(pig_no) as sol FROM sales WHERE pig_id = '.$pig['pig_id'])->fetch();
+                    $sold_pigs = $this->db->query('SELECT count(pig_no) as sol FROM sales WHERE pig_id = '.$pig['pig_id'])->fetch();
 
                     array_push($all, $sold_pigs['sol']);//Sold pigs
 
@@ -418,7 +418,7 @@
                     $balance = $capitals['cap'] - $expenses['expe'] - $pig['total_amount'];
                     array_push($all, $balance);//Capital Balanced
 
-                    $sold_pigs = $this->db->query('SELECT sum(pig_no) as sol FROM sales WHERE pig_id = '.$pig['pig_id'])->fetch();
+                    $sold_pigs = $this->db->query('SELECT count(pig_no) as sol FROM sales WHERE pig_id = '.$pig['pig_id'])->fetch();
 
                     array_push($all, $sold_pigs['sol']);//Sold pigs
 
