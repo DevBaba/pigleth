@@ -25,7 +25,7 @@ $start = $time;
 
     <title>Piglets</title>
 
-    <!-- <link rel="icon" href="public/img/favicon.ico"> -->
+    <link rel="icon" href="public/img/brand.png">
 
     <!-- Bootstrap core CSS -->
     <link href="public/bootstrap-5.0.1-dist/css/bootstrap.css" rel="stylesheet">

@@ -28,6 +28,8 @@ if (!empty($_SESSION['username'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Signin</title>
+    <link rel="icon" href="public/img/brand.png">
+
     <!-- Bootstrap core CSS -->
     <link href="public/bootstrap-5.0.1-dist/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->

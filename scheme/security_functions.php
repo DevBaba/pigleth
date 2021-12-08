@@ -45,6 +45,7 @@
         function cleanData($string){
             $string = trim($string);
             $string = stripslashes($string);
+            $string = addslashes($string);
             return $string;
         }
 

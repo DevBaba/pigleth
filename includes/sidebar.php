@@ -18,7 +18,7 @@
                             <div class="col-10 mb-1 small"><i>Instructor I</i></div>
                             </div> -->
 
-            <a href="index.php"
+            <a href="<?php echo base_url(); ?>index.php"
                 class="list-group-item list-group-item-action lh-tight side-menu <?php active('index.php') ?> <?php active('') ?>">
                 <div class="d-flex w-100 align-items-center justify-content-between">
                     <div class="mb-0">
@@ -76,11 +76,13 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal medium mb-0">
 
                     <li class="bg-dark ps-4 sub-link">
-                        <a href="pigList_view.php" class="text-white "><i class="fa fa-icon fa-th-large me-1"></i> View
+                        <a href="<?php echo base_url(); ?>pigList_view.php" class="text-white "><i
+                                class="fa fa-icon fa-th-large me-1"></i> View
                             Pig List</a>
                     </li>
                     <li class="bg-dark pb-2 ps-4 sub-link">
-                        <a href="pigAdd_view.php" class="text-white "><i class="fa fa-icon fa-plus me-1"></i> Create New
+                        <a href="<?php echo base_url(); ?>pigAdd_view.php" class="text-white "><i
+                                class="fa fa-icon fa-plus me-1"></i> Create New
                             Pig</a>
                     </li>
 
@@ -104,12 +106,14 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal medium mb-0">
 
                     <li class="bg-dark ps-4 sub-link">
-                        <a href="capitalList_view.php" class="text-white "><i class="fa fa-icon fa-th-large me-1"></i>
+                        <a href="<?php echo base_url(); ?>capitalList_view.php" class="text-white "><i
+                                class="fa fa-icon fa-th-large me-1"></i>
                             View Capital
                             List</a>
                     </li>
                     <li class="bg-dark pb-2 ps-4 sub-link">
-                        <a href="capitalAdd_view.php" class="text-white "><i class="fa fa-icon fa-plus me-1"></i> Add
+                        <a href="<?php echo base_url(); ?>capitalAdd_view.php" class="text-white "><i
+                                class="fa fa-icon fa-plus me-1"></i> Add
                             New Capital</a>
                     </li>
 
@@ -133,11 +137,13 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal medium mb-0">
 
                     <li class="bg-dark ps-4 sub-link">
-                        <a href="expensesList_view.php" class="text-white "><i class="fa fa-icon fa-th-large me-1"></i>
+                        <a href="<?php echo base_url(); ?>expensesList_view.php" class="text-white "><i
+                                class="fa fa-icon fa-th-large me-1"></i>
                             View expenses</a>
                     </li>
                     <li class="bg-dark pb-2 ps-4 sub-link">
-                        <a href="expensesAdd_view.php" class="text-white "><i class="fa fa-icon fa-plus me-1"></i> Add
+                        <a href="<?php echo base_url(); ?>expensesAdd_view.php" class="text-white "><i
+                                class="fa fa-icon fa-plus me-1"></i> Add
                             New Expenses</a>
                     </li>
 
@@ -160,18 +166,20 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal medium mb-0">
 
                     <li class="bg-dark ps-4 sub-link">
-                        <a href="saleList_view.php" class="text-white "><i class="fa fa-icon fa-th-large me-1"></i> View
+                        <a href="<?php echo base_url(); ?>saleList_view.php" class="text-white "><i
+                                class="fa fa-icon fa-th-large me-1"></i> View
                             Sales</a>
                     </li>
                     <li class="bg-dark pb-2 ps-4 sub-link">
-                        <a href="saleAdd_view.php" class="text-white "><i class="fa fa-icon fa-plus me-1"></i> Add New
+                        <a href="<?php echo base_url(); ?>saleAdd_view.php" class="text-white "><i
+                                class="fa fa-icon fa-plus me-1"></i> Add New
                             Sales</a>
                     </li>
 
                 </ul>
             </div>
 
-            <a href="report_view.php"
+            <a href="<?php echo base_url(); ?>report_view.php"
                 class="list-group-item list-group-item-action lh-tight side-menu <?php active('report_view.php') ?>">
                 <div class="d-flex w-100 align-items-center justify-content-between">
                     <div class="mb-0">
@@ -182,7 +190,7 @@
                 </div>
             </a>
 
-            <a href="setting.php"
+            <a href="<?php echo base_url(); ?>setting.php"
                 class="list-group-item list-group-item-action lh-tight side-menu <?php active('setting.php') ?>">
                 <div class="d-flex w-100 align-items-center justify-content-between">
                     <div class="mb-0">
@@ -193,7 +201,8 @@
                 </div>
             </a>
 
-            <a href="logout.php" class="list-group-item list-group-item-action lh-tight side-menu">
+            <a href="<?php echo base_url(); ?>logout.php"
+                class="list-group-item list-group-item-action lh-tight side-menu">
                 <div class="d-flex w-100 align-items-center justify-content-between">
                     <div class="mb-0">
                         <i class="fa fa-icon fa-key me-2"></i>
