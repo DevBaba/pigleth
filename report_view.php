@@ -167,7 +167,7 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo Sanitize($report[1]); ?></td>
                                                 <td><?php echo Sanitize($report[2]); ?></td>
                                                 <td><?php echo Sanitize($report[3]); ?></td>
-                                                <td><?php echo Sanitize($report[4]); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($report[4])); ?></td>
 
                                                 <td><?php echo Sanitize($report[5]); ?></td>
                                                 <td><?php echo Sanitize($report[6]); ?></td>
@@ -175,7 +175,7 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo Sanitize($report[8]); ?></td>
                                                 <td><?php echo Sanitize($report[9]); ?></td>
                                                 <td><?php echo Sanitize($report[10]); ?></td>
-                                                <td><?php echo Sanitize($report[11]); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($report[11])); ?></td>
                                                 <td><?php echo Sanitize($report[12]); ?></td>
 
                                             </tr>

@@ -21,7 +21,10 @@
      */
         function change_date_format($date, $format='l, F j, Y') // default format is l, F j, Y (e.i.: Thu, December 5, 2021)
         {
-            return date($format, strtotime($date));
+            if($date=='')
+                return null;
+            else
+                return date($format, strtotime($date));
         }
 
     /* Count Date - count the remaining days from datenow to a specific date

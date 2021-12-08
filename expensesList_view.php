@@ -169,7 +169,8 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo Sanitize($expense['nurture_batch_name']); ?></td>
                                                 <td><?php echo Sanitize($expense['no_of_pig']); ?></td>
                                                 <td><?php echo Sanitize($expense['status']); ?></td>
-                                                <td><?php echo Sanitize($expense['date_purchaised']); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($expense['date_purchaised'])); ?>
+                                                </td>
 
                                                 <td>
                                                     <a

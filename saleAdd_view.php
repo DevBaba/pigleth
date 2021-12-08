@@ -74,7 +74,8 @@ if (empty($_SESSION['username'])) {
                                     // apply security to your data using our cleanData() function (or use directly the trim() & stripslashes() php built-in functions)
                                     
                                     $pig_id = explode(',',$_POST['pig_id'])[0]; // the value of pig_id is two value separated by comma, thats why I get the first value using explode() function
-                                    $pig_no = explode(',',$_POST['pig_id'])[1];
+                                    //$pig_no = explode(',',$_POST['pig_id'])[1];
+                                    $pig_no = 1; // sold one-by-one
 
                                     $kilogram = cleanData($_POST['kilogram']);
                                     $amount = cleanData($_POST['amount']);
@@ -147,7 +148,8 @@ if (empty($_SESSION['username'])) {
                                                 <option value="<?php echo $pig[1].','.Sanitize($pig[0]); ?>">
                                                     <?php echo Sanitize($pig[4]); ?> -
                                                     <?php echo Sanitize($pig[2]); ?>
-                                                    (<?php echo Sanitize($pig[0]) .' of '. Sanitize($pig[3]) .' pigs'; ?>)
+                                                    ( No.
+                                                    <?php echo Sanitize($pig[0]) .' of '. Sanitize($pig[3]) .' pigs'; ?>)
                                                 </option>
 
                                                 <?php } ?>

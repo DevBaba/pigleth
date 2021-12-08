@@ -155,13 +155,15 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo $count++; ?></td>
                                                 <td><?php echo Sanitize($capital['capital_amount']); ?></td>
                                                 <td><?php echo Sanitize($capital['description']); ?></td>
-                                                <td><?php echo Sanitize($capital['date_posted']); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($capital['date_posted'])); ?>
+                                                </td>
 
                                                 <td><?php echo Sanitize($capital['full_name']); ?></td>
                                                 <td><?php echo Sanitize($capital['nurture_batch_name']); ?></td>
                                                 <td><?php echo Sanitize($capital['no_of_pig']); ?></td>
                                                 <td><?php echo Sanitize($capital['status']); ?></td>
-                                                <td><?php echo Sanitize($capital['date_buy']); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($capital['date_buy'])); ?>
+                                                </td>
 
                                                 <td>
                                                     <a

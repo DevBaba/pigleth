@@ -152,8 +152,8 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo Sanitize($owner['full_name']); ?></td>
                                                 <td><?php echo Sanitize($owner['contact']); ?></td>
                                                 <td><?php echo Sanitize($owner['address']); ?></td>
-                                                <td><?php echo Sanitize($owner['created']); ?></td>
-                                                <td><?php echo Sanitize($owner['updated']); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($owner['created'])); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($owner['updated'])); ?></td>
                                                 <td>
                                                     <a href="ownerEdit_view.php?id=<?php echo $owner['owner_id']; ?>"><button
                                                             class="btn btn-mini btn-warning">Edit</button></a>

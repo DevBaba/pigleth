@@ -123,6 +123,7 @@ if (empty($_SESSION['username'])) {
                                                 <th>Date Buy</th>
                                                 <th>Date Sold</th>
                                                 <th>Created</th>
+                                                <th>Updated</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -159,9 +160,10 @@ if (empty($_SESSION['username'])) {
                                                 <td><?php echo Sanitize($pig['amount_per_pig']); ?></td>
                                                 <td><?php echo Sanitize($pig['total_amount']); ?></td>
                                                 <td><?php echo Sanitize($pig['status']); ?></td>
-                                                <td><?php echo Sanitize($pig['date_buy']); ?></td>
-                                                <td><?php echo Sanitize($pig['date_sold']); ?></td>
-                                                <td><?php echo Sanitize($pig['updated']); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($pig['date_buy'])); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($pig['date_sold'])); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($pig['created'])); ?></td>
+                                                <td><?php echo change_date_format(Sanitize($pig['updated'])); ?></td>
                                                 <td>
                                                     <a href="pigEdit_view.php?id=<?php echo $pig['pig_id']; ?>"><button
                                                             class="btn btn-mini btn-warning">Edit</button></a>
