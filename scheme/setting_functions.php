@@ -8,7 +8,12 @@
         $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $values = parse_url($actual_link);
         $links = explode('/',$values['path']);
-        if($links[2] == $page) // change it to [1] if you use virtual host/ domain/ or if you uploaded it online (else [2] if in localhost)
+        $i = 2;
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        {
+            $i = 1;
+        }
+        if($links[$i] == $page)
         {
             echo 'active';
         }
