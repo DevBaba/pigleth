@@ -23,7 +23,7 @@
         define('DBPORT',':3306');
     
     /**
-     * Bas URL
+     * Base URL
      */
     define('BASE_URL','http://localhost/pigs/');  // change it if you use it online (or uploaded to hosting server)
 

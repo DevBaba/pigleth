@@ -79,8 +79,7 @@ if (empty($_SESSION['username'])) {
                                         </select>
                                     </div>
                                     <div class="col-md-5">
-                                        <input type="text" class="form-control form-control-sm ms-1" name="searchInput"
-                                            required>
+                                        <input type="text" class="form-control form-control-sm ms-1" name="searchInput">
                                     </div>
                                     <div class="col-md-4">
                                         <input type="submit" class="btn btn-sm btn-outline-success ms-2" value="Search"

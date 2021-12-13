@@ -4,7 +4,6 @@
     // include query builder if you want to use it
     require_once('Query_builder.php');
 
-
     /* Model Class
      * Extend your Database class, so we can use $db variable (your database connection)
      */
@@ -461,7 +460,7 @@
                 $password = sha1(md5($password));
                 
                 // you can directly use the $this->db ($this->db is public variable from extended Database class - db connection)
-                $result = $this->db->prepare("INSERT INTO login (username,password) VALUES (?,?)")
+                $result = $this->db->prepare("INSERT INTO user (username,password) VALUES (?,?)")
                             ->execute([$username,$password]);
                 return $result;
             }
@@ -470,13 +469,21 @@
          * 
          */
 
-            function user_settings($username, $password, $new_pass)
+            function user_settings($password, $new_pass)
             {
                 $password = sha1(md5($password));
                 $new_pass = sha1(md5($new_pass));
 
-                return $this->db->prepare("UPDATE user set password=? WHERE username=$username")
-                            ->execute([$new_pass]);
+                $username = $_SESSION['username'];
+
+                if($this->db->query("SELECT * from user WHERE username='".$username."' && password='".$password."'")->fetch()){
+                    return $this->db->prepare("UPDATE user SET password = :pass WHERE username = '$username'")
+                                    ->execute([':pass' => $new_pass]);
+                }else{
+                    return false;
+                }
+
+                //return $this->qb->update('user',['password'] ,[$new_pass], "username=$username");
             }
 
 

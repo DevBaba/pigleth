@@ -72,7 +72,7 @@ if (empty($_SESSION['username'])) {
                                 if(CSRFProtect($_POST['token']))
                                 {
                                     // apply security to your data using our cleanData() function (or use directly the trim() & stripslashes() php built-in functions)
-                                    $username = cleanData($_POST['username']);
+                                    
                                     $password = cleanData($_POST['password']);
                                     $new_pass = cleanData($_POST['new_pass']);
                                     $confirm_pass = cleanData($_POST['confirm_pass']);
@@ -81,9 +81,14 @@ if (empty($_SESSION['username'])) {
                                     if($new_pass == $confirm_pass)
                                     {
                                         // update in database
-                                        if($db->user_settings($username, $password, $new_pass)){
-                                            // redirect function - from scheme/setting_functions.php
-                                            redirect('setting');
+                                        if($db->user_settings($password, $new_pass)){
+                                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <h4 class="alert-heading">Success!</h4>
+                                                <p></p>
+                                                <hr>
+                                                <p class="mb-0"> Password Successfully Updated! </p>
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>';
                                         }else{
                                             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 <h4 class="alert-heading">Something went wrong!</h4>
@@ -136,7 +141,8 @@ if (empty($_SESSION['username'])) {
                                             <label for="username" class="form-label">Userame*</label>
                                             <input type="text" class="form-control form-control-sm" name="username"
                                                 id="username" placeholder="" data-toggle="tooltip"
-                                                data-placement="right" title="Username" required>
+                                                data-placement="right" title="Username"
+                                                value="<?php echo $_SESSION['username']; ?>" required>
                                         </div>
 
                                         <div class="col-md-12 mb-2">
