@@ -144,8 +144,10 @@ if (empty($_SESSION['username'])) {
                                             }
 
                                             $count = 1;
+                                            $totalsales = 0;
                                             foreach($sales as $sale)
                                             {
+                                                $totalsales = $totalsales + Sanitize($sale['total']);
                                                 // use security for viewing records from your database using our Sanitize() methods
                                                 // or use directly the php built-in function htmlspecialchars($owner[full_name], ENT_QUOTES, 'UTF-8');
                                             
@@ -192,6 +194,8 @@ if (empty($_SESSION['username'])) {
                                         </tfoot>
                                     </table>
                                     <!-- End Table -->
+
+                                    <div class="mt-1 mx-2">Total Sales : <?php echo $totalsales; ?></div>
 
                                 </div>
                                 <!-- End Table Div -->

@@ -143,8 +143,10 @@ if (empty($_SESSION['username'])) {
                                             }
 
                                             $count = 1;
+                                            $totalcapital = 0;
                                             foreach($capitals as $capital)
                                             {
+                                                $totalcapital = $totalcapital + Sanitize($capital['capital_amount']);
                                                 // use security for viewing records from your database using our Sanitize() methods
                                                 // or use directly the php built-in function htmlspecialchars($owner[full_name], ENT_QUOTES, 'UTF-8');
                                             
@@ -192,6 +194,8 @@ if (empty($_SESSION['username'])) {
                                         </tfoot>
                                     </table>
                                     <!-- End Table -->
+
+                                    <div class="mt-1 mx-2">Total Capital : <?php echo $totalcapital; ?></div>
 
                                 </div>
                                 <!-- End Table Div -->

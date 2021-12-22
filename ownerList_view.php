@@ -97,7 +97,8 @@ if (empty($_SESSION['username'])) {
                         {
                             require_once('ExportData.php');
                             $export = new ExportData();
-                            $export->export_owners();
+                            //$export->export_owners();
+                            $export->export();
                         }
 
                     ?>

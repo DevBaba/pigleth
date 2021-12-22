@@ -119,6 +119,7 @@ if (empty($_SESSION['username'])) {
                                                 <th>Total amount</th>
                                                 <th>Fare per items</th>
                                                 <th>Total Fare</th>
+                                                <th>All Expenses</th>
                                                 <th>Remarks</th>
                                                 <th>Owner</th>
                                                 <th>Pigs | Batch Name</th>
@@ -147,11 +148,14 @@ if (empty($_SESSION['username'])) {
                                             }
 
                                             $count = 1;
+                                            $grandtotal = 0;
                                             foreach($expenses as $expense)
                                             {
+                                                $grandtotal = $grandtotal + Sanitize($expense['fare_total']) + Sanitize($expense['exp_total_amount']);
+
                                                 // use security for viewing records from your database using our Sanitize() methods
                                                 // or use directly the php built-in function htmlspecialchars($owner[full_name], ENT_QUOTES, 'UTF-8');
-                                            
+                                                
                                             ?>
 
                                             <tr class="odd">
@@ -163,6 +167,10 @@ if (empty($_SESSION['username'])) {
 
                                                 <td><?php echo Sanitize($expense['fare_per_item']); ?></td>
                                                 <td><?php echo Sanitize($expense['fare_total']); ?></td>
+
+                                                <td><b><?php echo Sanitize($expense['fare_total']) + Sanitize($expense['exp_total_amount']); ?>
+                                                    </b></td>
+
                                                 <td><?php echo Sanitize($expense['exp_remarks']); ?></td>
                                                 <td><?php echo Sanitize($expense['full_name']); ?></td>
                                                 <td><?php echo Sanitize($expense['nurture_batch_name']); ?></td>
@@ -199,6 +207,8 @@ if (empty($_SESSION['username'])) {
                                         </tfoot>
                                     </table>
                                     <!-- End Table -->
+
+                                    <div class="mt-1 mx-2">Total Expenses : <?php echo $grandtotal; ?></div>
 
                                 </div>
                                 <!-- End Table Div -->
