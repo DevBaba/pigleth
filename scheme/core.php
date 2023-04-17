@@ -16,16 +16,16 @@
      * Database Information
      */
         define('DBHOST','localhost');
-        define('DBNAME','malmonre_farm');
-        define('DBUSER','malmonre_farm');
-        define('DBPASS','0C=Lt]TyF%P{');
+        define('DBNAME','');
+        define('DBUSER','');
+        define('DBPASS','');
         define('CHARSET','utf8');
         //define('DBPORT',':3306');
     
     /**
      * Base URL
      */
-    define('BASE_URL','https://farm.confired.com/');  // change it if you use it online (or uploaded to hosting server)
+    define('BASE_URL','http://localhost/project/');  // change it if you use it online (or uploaded to hosting server)
 
     /*
      * inlude all in one - 
