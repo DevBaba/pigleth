@@ -3,6 +3,10 @@
 ### Sample project
 - Pig Sales & Inventory
 
+### PHP Version
+
+PHP 7.0 - PHP 7.4 (recomended)
+
 ### How to setup?
 - just edit core.php file
 

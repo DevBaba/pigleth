@@ -39,7 +39,7 @@
                 try{
                     // Set a value to $db public variable - it will be use to your query statements at Model class e.g $this->db
                     // NOTE: DBHOST, DBPORT, DBNAME, and other constant variable are define in the core.php file
-                    $this->db = new PDO('mysql' . ':host=' . DBHOST . DBPORT . ';dbname=' . DBNAME.';charset='.CHARSET, DBUSER, DBPASS, $options); // NOTE: DBHOST, DBPORT, DBNAME, and other constant variable are define in the core.php file
+                    $this->db = new PDO('mysql' . ':host=' . DBHOST . ';dbname=' . DBNAME.';charset='.CHARSET, DBUSER, DBPASS, $options); // NOTE: DBHOST, DBPORT, DBNAME, and other constant variable are define in the core.php file
                 } catch (Exception $e) {
                     throw new Exception($e->getMessage(), (int)$e->getCode());
                 }

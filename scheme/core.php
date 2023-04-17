@@ -10,22 +10,22 @@
      * set to 1 if you're on development - e.g. ini_set('display_errors', 1); 
      * and 0 in production - e.g. ini_set('display_errors', 0);
      */
-        ini_set('display_errors', 1);
+        ini_set('display_errors', 0);
 
     /**
      * Database Information
      */
         define('DBHOST','localhost');
-        define('DBNAME','baboy');
-        define('DBUSER','root');
-        define('DBPASS','');
+        define('DBNAME','malmonre_farm');
+        define('DBUSER','malmonre_farm');
+        define('DBPASS','0C=Lt]TyF%P{');
         define('CHARSET','utf8');
-        define('DBPORT',':3306');
+        //define('DBPORT',':3306');
     
     /**
      * Base URL
      */
-    define('BASE_URL','http://localhost/pigs/');  // change it if you use it online (or uploaded to hosting server)
+    define('BASE_URL','https://farm.confired.com/');  // change it if you use it online (or uploaded to hosting server)
 
     /*
      * inlude all in one - 
